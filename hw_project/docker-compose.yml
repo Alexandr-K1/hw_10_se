@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: nw_10-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hw_10
+      POSTGRES_DB: hw_10
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
